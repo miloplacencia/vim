@@ -72,7 +72,19 @@ map <C-l> <C-W>l
 execute pathogen#infect()
 call pathogen#helptags()
 
+"===========================================================
+" Sintactic
+"===========================================================
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'markdown'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'markdown', 'vue'] }

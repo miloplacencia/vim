@@ -22,7 +22,7 @@ set laststatus=2 " for airline
 " noopkat settings
 "============================================================
 syntax on
-"color dracula
+color dracula
 set smartindent
 set clipboard=unnamed " use os clipboard
 set shiftwidth=2 " number of spaces when shift indenting
@@ -83,6 +83,20 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"==========================================================
+" Vim Windowswap
+"==========================================================
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
+
+"==========================================================
+" Vim NERDTree
+"==========================================================
+autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', {

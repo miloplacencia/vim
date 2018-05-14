@@ -40,7 +40,7 @@ let g:ctrlp_show_hidden=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " autoquit if only nerdtree is open
 set noswapfile
 let g:jsx_ext_required=0
-
+set t_Co=256
 "============================================================
 " Mappings
 "============================================================
@@ -91,12 +91,6 @@ let g:windowswap_map_keys = 0 "prevent default bindings
 nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
-
-"==========================================================
-" Vim NERDTree
-"==========================================================
-autocmd vimenter * NERDTree
-map <C-n> :NERDTreeToggle<CR>
 
 call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', {

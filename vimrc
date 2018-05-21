@@ -55,6 +55,8 @@ Plugin 'aperezdc/vim-template'                      " templates by file type
 Plugin 'w0rp/ale'                                   " alternative to syntastic
 Plugin 'mxw/vim-jsx'                                " syntax highlighting and indentation for jsx 
 Plugin 'posva/vim-vue'                              " vim vue
+Plugin 'crusoexia/vim-monokai'                      " Monokai theme
+Plugin 'mattn/emmet-vim'                            " emmet
 "Plugin 'vim-syntastic/syntastic'                    " syntastic plugin
 
 call vundle#end()
@@ -104,7 +106,7 @@ set wildignore+=tmp/**
 set wildignore+=public/uploads/**
 set wildignore+=public/images/**
 set wildignore+=vendor/**
-set nowrap                                        " Turn off line wrapping
+set wrap                                        " Turn off line wrapping
 set smartindent
 set autoindent
 
@@ -164,6 +166,8 @@ let g:ale_fixers['javascript'] = ['prettier']
 " Set this setting in vimrc if you want to fix files automatically on save.
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
+
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 
 " Jsx syntax highlighting will work on .js files
 let g:jsx_ext_required = 0
@@ -314,7 +318,7 @@ autocmd InsertLeave * write
 "#############################################################################
 " Color scheme
 "#############################################################################
-colorscheme solarized
+colorscheme monokai
 
 "#############################################################################
 " UTF8

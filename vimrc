@@ -57,6 +57,7 @@ Plugin 'mxw/vim-jsx'                                " syntax highlighting and in
 Plugin 'posva/vim-vue'                              " vim vue
 Plugin 'crusoexia/vim-monokai'                      " Monokai theme
 Plugin 'mattn/emmet-vim'                            " emmet
+Plugin 'ternjs/tern_for_vim'                        " Tern for javascript
 "Plugin 'vim-syntastic/syntastic'                    " syntastic plugin
 
 call vundle#end()
@@ -329,7 +330,8 @@ colorscheme monokai
 "#############################################################################
 " UTF8
 "#############################################################################
-:set encoding=utf-8
-:set fileencoding=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
 
+set omnifunc=syntaxcomplete#Complete
 

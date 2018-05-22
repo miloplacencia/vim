@@ -9,10 +9,10 @@ let need_to_install_plugins=0
 
 " Bootstrap Vundle if it's not installed
 if empty(system("grep lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim"))
-    silent !mkdir -p ~/.vim/bundle
-    silent !rm -rf ~/.vim/bundle/Vundle.vim
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/Vundle.vim
-    let need_to_install_plugins=1
+  silent !mkdir -p ~/.vim/bundle
+  silent !rm -rf ~/.vim/bundle/Vundle.vim
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/Vundle.vim
+  let need_to_install_plugins=1
 endif
 
 set runtimepath+=~/.vim/bundle/Vundle.vim
@@ -62,8 +62,8 @@ Plugin 'mattn/emmet-vim'                            " emmet
 call vundle#end()
 
 if 1 == need_to_install_plugins
-    silent! PluginInstall
-    q
+  silent! PluginInstall
+  q
 endif
 
 "#############################################################################
@@ -111,6 +111,10 @@ set linebreak
 set nolist
 set smartindent
 set autoindent
+set foldmethod=syntax                           " syntax highlight
+set foldcolumn=1                                " defines 1 col at window left, to indicate folding
+let javaScript_fold=1                           " Activate fold in JS
+set foldlevelstart=99                           " Start file w/folds opened
 
 "#############################################################################
 " Misc
@@ -136,14 +140,14 @@ let g:airline_theme='luna'
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+  let g:airline_symbols = {}
 endif
 
 let g:ctrlp_user_command = {
-    \ 'types': {
-    \   1: ['.git', 'cd %s && git ls-files --cached --exclude-standard --others']
-    \ },
-    \ 'fallback': 'ag %s -l --nocolor -g ""' }
+      \ 'types': {
+      \   1: ['.git', 'cd %s && git ls-files --cached --exclude-standard --others']
+      \ },
+      \ 'fallback': 'ag %s -l --nocolor -g ""' }
 
 let NERDSpaceDelims = 1
 
@@ -154,8 +158,8 @@ let g:solarized_termtrans=1
 
 let g:testify_launcher = "Dispatch "
 let g:testify_runners = {
-            \ 'cucumber': 'zeus cucumber ',
-            \ 'rspec': 'zeus rspec ' }
+      \ 'cucumber': 'zeus cucumber ',
+      \ 'rspec': 'zeus rspec ' }
 
 let g:templates_directory = "~/.vim/templates/"
 
@@ -282,9 +286,9 @@ map <leader>s :source ~/.vimrc<CR>
 " use <leader>nt to toggle the line number counting method
 function! g:NumberToggle()
   if &relativenumber == 1
-     set norelativenumber
+    set norelativenumber
   else
-     set relativenumber
+    set relativenumber
   endif
 endfunction
 nnoremap <leader>nt :call g:NumberToggle()<cr>

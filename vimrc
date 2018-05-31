@@ -58,7 +58,8 @@ Plugin 'posva/vim-vue'                              " vim vue
 Plugin 'crusoexia/vim-monokai'                      " Monokai theme
 Plugin 'mattn/emmet-vim'                            " emmet
 Plugin 'ternjs/tern_for_vim'                        " Tern for javascript
-"Plugin 'vim-syntastic/syntastic'                    " syntastic plugin
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
 
@@ -154,8 +155,8 @@ let NERDSpaceDelims = 1
 
 let ruby_operators=1
 
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
 
 let g:testify_launcher = "Dispatch "
 let g:testify_runners = {
@@ -174,7 +175,7 @@ let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
 
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all'
 
 " Jsx syntax highlighting will work on .js files
 let g:jsx_ext_required = 0
@@ -322,10 +323,22 @@ au BufRead,BufNewFile *.txt,*.md,*.markdown,*.rdoc set wrap linebreak nolist tex
 " Save on exit insert mode
 autocmd InsertLeave * write
 
+" IndentLine {{
+let g:indentLine_char = '_'
+let g:indentLine_first_char = '_'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
+" }}
+
 "#############################################################################
 " Color scheme
 "#############################################################################
-colorscheme monokai
+set termguicolors     " enable true colors support
+" let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+" let ayucolor="dark"   " for dark version of theme
+
+colorscheme ayu
 
 "#############################################################################
 " UTF8

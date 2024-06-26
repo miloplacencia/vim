@@ -40,12 +40,9 @@ Plugin 'scrooloose/nerdtree'                        " A tree explorer plugin
 Plugin 'sjl/vitality.vim'                           " Make Vim play nicely with iTerm 2 and tmux
 Plugin 'tpope/vim-abolish'                          " easily search for, substitute, and abbreviate multiple variants of a word
 Plugin 'tpope/vim-cucumber'                         " provides syntax highlightling, indenting, and a filetype plugin
-Plugin 'tpope/vim-endwise'                          " wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
 Plugin 'tpope/vim-fugitive'                         " Git plugin
 Plugin 'tpope/vim-haml'                             " HAML support
 Plugin 'tpope/vim-projectionist'                    " project configuration
-Plugin 'tpope/vim-rails'                            " Rails helpers
-Plugin 'tpope/vim-rake'                             " makes Ruby project navigation easier for non-Rails projects
 Plugin 'tpope/vim-repeat'                           " Enable repeating supported plugin maps with '.'
 Plugin 'tpope/vim-surround'                         " makes working w/ quotes, braces,etc. easier
 Plugin 'tpope/vim-unimpaired'                       " pairs of handy bracket mappings
@@ -59,6 +56,10 @@ Plugin 'crusoexia/vim-monokai'                      " Monokai theme
 Plugin 'mattn/emmet-vim'                            " emmet
 Plugin 'ternjs/tern_for_vim'                        " Tern for javascript
 Plugin 'ayu-theme/ayu-vim'
+Plugin 'pangloss/vim-javascript'    " JavaScript support
+Plugin 'leafgarland/typescript-vim' " TypeScript syntax
+Plugin 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plugin 'jparise/vim-graphql'        " GraphQL syntax
 Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
